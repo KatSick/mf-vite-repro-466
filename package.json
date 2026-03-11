@@ -1,0 +1,18 @@
+{
+  "name": "mf-vite8-repro",
+  "private": true,
+  "description": "Minimal repro for module-federation/vite#466 — syntheticNamedExports fails with Vite 8 (Rolldown)",
+  "dependencies": {
+    "@repro/design-system": "workspace:*"
+  },
+  "scripts": {
+    "dev": "pnpm -r --parallel dev",
+    "build": "pnpm -r build",
+    "preview": "pnpm -r --parallel preview"
+  },
+  "pnpm": {
+    "overrides": {
+      "vite": "8.0.0"
+    }
+  }
+}
