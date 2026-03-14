@@ -5,6 +5,7 @@ export default defineConfig({
   plugins: [
     federation({
       name: "host",
+      hostInitInjectLocation: "entry",
       remotes: {
         remote: {
           type: "module",
@@ -13,9 +14,9 @@ export default defineConfig({
         },
       },
       dts: false,
+      shareStrategy: "loaded-first",
       shared: {
         react: { singleton: true },
-        "react-dom": { singleton: true },
         "@repro/design-system": { singleton: true },
       },
     }),

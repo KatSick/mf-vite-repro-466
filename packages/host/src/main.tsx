@@ -1,7 +1,17 @@
 import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 
-const RemoteButton = lazy(() => import("remote/Button"));
+const RemoteButton = lazy(async () => {
+  const mod = await import("remote/Button");
+  return {
+    default:
+      mod.default?.Button ??
+      mod.Button ??
+      mod.__moduleExports?.Button ??
+      mod.default ??
+      mod.__moduleExports,
+  };
+});
 
 function App() {
   return (
