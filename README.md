@@ -4,7 +4,7 @@
 
 ## Issue
 
-When using `@module-federation/vite` with `vite@8.0.0-beta.18`, `vite build` fails because
+When using `@module-federation/vite` with `vite@8`, `vite build` fails because
 Rolldown does not support `syntheticNamedExports` (used internally by the plugin to resolve
 named imports from shared modules).
 
@@ -48,5 +48,5 @@ shared modules are unresolvable at build time.
 
 ## Versions
 
-- `vite`: 8.0.0-beta.18 (rolldown 1.0.0-rc.8)
-- `@module-federation/vite`: 1.12.3
+- `vite`: 8
+- `@module-federation/vite`: 1.13.0
